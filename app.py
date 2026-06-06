@@ -102,12 +102,17 @@ threshold = st.slider(
 # -------------------------
 
 puntaje = 0
+calculo = []
 
 for i in range(3):
     for j in range(3):
         puntaje += imagen[i][j] * pesos[i][j]
+        calculo.append(f"({imagen[i][j]}×{pesos[i][j]})")
 
 st.subheader("Resultado")
+
+st.write("Cálculo realizado:")
+st.write(" + ".join(calculo))
 
 st.write("Puntaje total:", puntaje)
 st.write("Threshold actual:", threshold)
