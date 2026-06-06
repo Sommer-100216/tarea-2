@@ -110,6 +110,7 @@ for i in range(3):
 st.subheader("Resultado")
 
 st.write("Puntaje total:", puntaje)
+st.write("Threshold actual:", threshold)
 
 if puntaje >= threshold:
     st.success("La máquina piensa que es una T")
