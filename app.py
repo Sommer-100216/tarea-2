@@ -111,7 +111,21 @@ for i in range(3):
 
 st.subheader("Resultado")
 
+puntaje = 0
+
+st.subheader("Resultado")
+
 st.write("Cálculo realizado:")
+
+for i in range(3):
+    fila_calculo = []
+
+    for j in range(3):
+        puntaje += imagen[i][j] * pesos[i][j]
+        fila_calculo.append(f"({imagen[i][j]}×{pesos[i][j]})")
+
+    st.text("   ".join(fila_calculo))
+
 st.write(" + ".join(calculo))
 
 st.write("Puntaje total:", puntaje)
