@@ -60,14 +60,8 @@ imagen = imagenes[nombre]
 st.write("Imagen seleccionada:")
 
 for fila in imagen:
-    linea = ""
-    for pixel in fila:
-        if pixel == 1:
-            linea += "⬛ "
-        else:
-            linea += "⬜ "
-    st.text(linea)
-
+    st.text(" ".join(map(str, fila)))
+    
 # -------------------------
 # Pesos ajustables
 # -------------------------
